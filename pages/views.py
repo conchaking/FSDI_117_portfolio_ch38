@@ -15,6 +15,7 @@ def contact(request):
             #Get the data from the HTML template
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
             content = form.cleaned_data['content']
 
             html = render_to_string('pages/contact_template.html', {
@@ -24,7 +25,7 @@ def contact(request):
             })
 
             #Use the template to send the email
-            send_mail('The Subject', 'The Message', 'from@test.com', ['to@test.com'], html_message=html)
+            send_mail(subject, 'The Message', 'from@test.com',['mariafeernanda.murillo@gmail.com'], html_message=html)
 
             return redirect('contact')
             #Go back to the contact page
