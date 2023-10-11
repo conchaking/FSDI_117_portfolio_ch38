@@ -37,8 +37,8 @@
 
             <div class="nav-link center">
                 <a href="{% url 'home' %}">About me</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
+                <a href="{% url 'projects_list' %}">Projects</a>
+                <a href="{% url 'experiences_list' %}">Experience</a>
                 <a href="{% url 'contact' %}">Contact</a>
             </div>
 
@@ -59,8 +59,8 @@
 
         <nav class="center">
             <a href="{% url 'home' %}">About me</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
+            <a href="{% url 'projects_list' %}">Projects</a>
+            <a href="{% url 'experiences_list' %}">Experience</a>
             <a href="{% url 'contact' %}">Contacts</a>
         </nav>
     </footer>
